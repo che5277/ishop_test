@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tv_content"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="@dimen/padding_10"
+    android:layout_height="@dimen/car_element_height"
+    >
+    <tableshop.ilinkedtech.com.views.SwitchButton
+        android:id="@+id/sw_agree"
+        app:kswThumbColor="@color/selector_switch_thumb"
+        app:kswBackColor="@color/selector_switch_bg"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_agree_detail"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/tms_blue"
+        android:text="@string/我同意领骏达服务协议"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
+

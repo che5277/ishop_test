@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_4"
+        android:layout_marginRight="@dimen/padding_4"
+        android:layout_marginBottom="@dimen/padding_4"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/padding_4"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="false"
+        android:layout_centerHorizontal="true"
+        app:cardElevation="@dimen/padding_3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/item_bg"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_showCarDetail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_150">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:id="@+id/iv_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/iv_icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:textColor="@color/black_effective"
+                        android:id="@+id/tv_car_name"
+                        android:layout_gravity="bottom"
+                        android:paddingLeft="@dimen/padding_4"
+                        android:lines="2"
+                        android:textSize="@dimen/text_size_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </FrameLayout>
+
+                <CheckBox
+                    android:layout_margin="@dimen/padding_10"
+                    android:id="@+id/view_seleted"
+                    android:background="@color/bg_focus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

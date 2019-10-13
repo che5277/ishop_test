@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg"
+    android:layout_height="wrap_content"
+   >
+
+    <LinearLayout
+        android:id="@+id/ll_input_layout"
+        android:layout_width="match_parent"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_name"
+            android:background="@drawable/et_bg"
+            android:layout_marginBottom="@dimen/et_padding_left"
+            android:paddingLeft="@dimen/et_padding_left"
+            android:layout_width="match_parent"
+            android:hint="@string/请输入手机号码"
+            android:text="13723717478"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_18"
+            android:layout_height="50dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <EditText
+                android:id="@+id/et_password"
+                android:background="@drawable/et_bg"
+                android:paddingLeft="@dimen/et_padding_left"
+                android:layout_width="match_parent"
+                android:hint="@string/请输入验证码"
+                android:text=""
+                android:textSize="@dimen/text_size_18"
+                android:gravity="center_vertical"
+                android:layout_height="50dp"/>
+            <TextView
+                android:id="@+id/tv_get_mobile_msg"
+                android:background="@drawable/selector_mobile_msm_bg"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/edit_text_bg"
+                android:layout_width="@dimen/mobile_msm_width"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/获取动态密码"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="50dp"
+        android:background="@color/bg_login_nomal"
+        android:text="@string/加入会员"
+        android:textStyle="bold"
+        android:textColor="@color/backgroud_nomal"
+        android:textSize="22sp"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

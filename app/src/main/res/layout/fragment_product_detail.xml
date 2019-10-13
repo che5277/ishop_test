@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--TODO 底部-->
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:padding="50dp"
+        android:background="@android:color/white"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_add_to_shopping_car"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_weight="1.5"
+            android:background="@color/tab_indicator_color"
+            android:text="@string/加入购物车"
+            android:textColor="@color/item_seleted"
+            android:textSize="@dimen/text_action_title"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btn_buy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/selector_submit_btn_bg"
+            android:text="@string/立即购买"
+            android:textColor="@color/selector_buy_btn_color"
+            android:textSize="@dimen/text_action_title"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/refreshLayout"
+        android:layout_above="@+id/ll_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/item_bg"
+        app:srlAccentColor="#444444"
+        app:srlEnablePreviewInEditMode="true">
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/item_bg"
+                android:orientation="vertical">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/banner_product"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="800dp"
+                    />
+                <ImageView
+                    android:id="@+id/iv_icon"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_8"
+                    android:paddingRight="@dimen/padding_8"
+                    android:background="@color/item_bg"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/iv_favorite"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/selector_favorite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:padding="@dimen/padding_10"
+                            android:id="@+id/tv_product_name"
+                            android:textSize="50sp"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:layout_toLeftOf="@+id/iv_favorite"
+                            android:textColor="@color/car_detail_color"
+                            android:layout_width="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="@dimen/padding_4"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:padding="20dp"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                    <!--android:textSize="@dimen/text_size_13"-->
+                                <TextView
+                                    android:textColor="@color/tms_blue"
+                                    android:layout_marginBottom="@dimen/padding_4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="颜色 "
+                                    android:textSize="36sp"
+                                    android:layout_height="wrap_content"/>
+                                <tableshop.ilinkedtech.com.views.flowlayout.TagFlowLayout
+                                    android:id="@+id/flowlayout_type"
+                                    app:max_select="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/padding_10">
+                                </tableshop.ilinkedtech.com.views.flowlayout.TagFlowLayout>
+
+                            </LinearLayout>
+                            <TextView
+                                android:visibility="gone"
+                                android:textColor="@color/tip"
+                                android:layout_marginBottom="@dimen/padding_4"
+                                android:textSize="@dimen/text_size_13"
+                                android:layout_width="wrap_content"
+                                android:text="@string/数量"
+                                android:layout_height="wrap_content"/>
+
+                            <tableshop.ilinkedtech.com.views.AmountView
+                                android:visibility="gone"
+                                android:id="@+id/amount_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/padding_30"
+                                android:layout_centerInParent="true"
+                                android:layout_marginRight="@dimen/car_item_color_iv_height"
+                                app:btnTextSize="@dimen/text_size_18"
+                                app:btnWidth="@dimen/padding_30"
+                                app:tvWidth="@dimen/drawer_item_height"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_product_price"
+                            android:textColor="@color/member_head_color"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:textSize="46sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_storage"
+                        android:layout_width="match_parent"
+                        android:text="库存0件"
+                        android:layout_marginBottom="@dimen/padding_4"
+                        android:textColor="@color/tms_blue"
+                        android:layout_height="wrap_content"
+                        android:textSize="36sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_product_description"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/padding_20"
+                        android:layout_height="wrap_content"
+                        android:textSize="36sp"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="280dp"
+                        android:layout_weight="1"
+                        android:src="@mipmap/smart_big"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="280dp"
+                        android:layout_weight="1"
+                        android:src="@mipmap/wechat_big"/>
+
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="38sp"
+                    android:text="扫描下载APP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="38sp"
+                    android:text="扫描关注公众号"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+
+    <TextView
+        android:id="@+id/detail_finish"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        />
+
+
+
+
+</RelativeLayout>

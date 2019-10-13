@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/show_product_back"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:padding="@dimen/padding_10"/>
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:text="管理展示的商品列表"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/tv_product_determine"
+        android:padding="5dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/确定"
+        android:textColor="@android:color/white"/>
+</RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_product"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+</LinearLayout>

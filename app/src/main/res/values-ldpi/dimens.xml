@@ -1,0 +1,51 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_vertical_margin">32dp</dimen>
+    <dimen name="text_size_10">20sp</dimen>
+    <dimen name="text_size_12">24sp</dimen>
+    <dimen name="text_size_13">26sp</dimen>
+    <dimen name="text_size_15">30sp</dimen>
+    <dimen name="text_size_18">36sp</dimen>
+    <dimen name="text_action_title">44sp</dimen>
+    <dimen name="padding_3">6dp</dimen>
+    <dimen name="padding_4">8dp</dimen>
+    <dimen name="padding_8">16dp</dimen>
+    <dimen name="padding_10">20dp</dimen>
+    <dimen name="padding_20">40dp</dimen>
+    <dimen name="tag_item_radius">@dimen/padding_3</dimen>
+    <dimen name="main_item_height">240dp</dimen>
+    <dimen name="search_item_height">100dp</dimen>
+    <dimen name="drawer_item_height">80dp</dimen>
+    <dimen name="car_item_color_iv_height">30dp</dimen>
+    <dimen name="car_detail_img_height">550dp</dimen>
+
+    <dimen name="car_element_height">30dp</dimen>
+    <dimen name="range_slider_width">600dp</dimen>
+
+    <dimen name="et_bg_radius">@dimen/padding_20</dimen>
+    <dimen name="et_padding_left">@dimen/padding_20</dimen>
+    <dimen name="order_item_width">200dp</dimen>
+    <dimen name="mobile_msm_width">@dimen/order_item_width</dimen>
+    <dimen name="shop_item_width">160dp</dimen>
+    <dimen name="bottom_item_seleted_width">140dp</dimen>
+
+    <dimen name="bottom_bar_options_text_size">@dimen/text_size_12</dimen>
+    <dimen name="large_textSize_sidebar">64sp</dimen>
+    <dimen name="ball_radius_sidebar">48dp</dimen>
+
+    <dimen name="slide_bar_padding">@dimen/padding_20</dimen>
+    <dimen name="car_detail_holder_text">@dimen/text_size_12</dimen>
+    <dimen name="car_detail_item_text">@dimen/text_size_10</dimen>
+    <dimen name="item_img_height">280dp</dimen>
+    <dimen name="bottom_bar_margin">0dp</dimen>
+
+    <dimen name="jz_start_button_w_h_normal">90dp</dimen>
+    <dimen name="jz_start_button_w_h_fullscreen">124dp</dimen>
+    <dimen name="search_cars_width">550dp</dimen>
+    <dimen name="height_80">160dp</dimen>
+    <dimen name="height_150">300dp</dimen>
+    <dimen name="padding_30">60dp</dimen>
+    <dimen name="dp_22">22dp</dimen>
+    <dimen name="dp_25dp">25dp</dimen>
+    <dimen name="dp_180">180dp</dimen>
+</resources>

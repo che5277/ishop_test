@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tableshop.ilinkedtech.com.views.keyboard.SKeyboardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/s_keyboard_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:shadowRadius="0.0"
+    android:visibility="visible"/>
+
+    <!--android:background="@color/default_keyboard_bg"-->
+    <!--android:keyBackground="@drawable/selector_keyboard_key"-->
+    <!--android:keyPreviewHeight="@dimen/default_keyPreviewHeight"-->
+    <!--android:keyPreviewLayout="@layout/view_keyboard_preview"-->
+    <!--android:keyTextColor="@color/default_keyTextColor"-->
+    <!--android:keyTextSize="@dimen/default_keyTextSize"-->
+    <!--android:labelTextSize="@dimen/default_labelTextSize"-->
+    <!--android:paddingBottom="@dimen/dp_8"-->
+    <!--android:paddingTop="@dimen/dp_8"-->
+    <!--android:shadowColor="@color/default_keyShadowColor"-->

@@ -1,0 +1,246 @@
+<resources>
+    <string-array name="sex_array">
+        <item >男</item>
+        <item >女</item>
+    </string-array>
+
+    <string-array name="sort_car_list_array">
+        <item >按价格从高到低↓</item>
+        <item >按价格从低到高↑</item>
+    </string-array>
+
+    <string-array name="filter_tag_car_stye">
+        <item>轿车</item>
+        <item>SUV</item>
+        <item>MPV</item>
+        <item>跑车</item>
+    </string-array>
+
+    <string-array name="filter_tag_car_price">
+        <item>30万以下</item>
+        <item>30-50万</item>
+        <item>50-80万</item>
+        <item>80-100万</item>
+        <item>100-150万</item>
+        <item>150万以上</item>
+    </string-array>
+
+    <string-array name="filter_tag_car_seat_count">
+        <item>4座以下</item>
+        <item>4-5座</item>
+        <item>5-7座</item>
+        <item>7座以上</item>
+    </string-array>
+
+    <string name="app_name">领骏达</string>
+    <string name="app_title">领骏达</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="全部">全部</string>
+    <string name="搜索">搜索</string>
+    <string name="我的收藏">我的收藏</string>
+    <string name="对比">对比</string>
+    <string name="设置">设置</string>
+
+    <!--item channel begin-->
+    <string name="长按编辑">长按编辑,拖拽排序</string>
+    <string name="我的频道">我的频道</string>
+    <string name="其他频道">其他频道</string>
+    <string name="编辑">编辑</string>
+    <string name="完成">完成</string>
+    <string name="系统出错">系统出错</string>
+    <string name="网络出错">网络出错</string>
+    <!--item channel end-->
+
+    <!--car detail begin-->
+    <string name="长宽高">长宽高</string>
+    <string name="座位">座位</string>
+    <string name="车门">车门</string>
+    <string name="燃油">燃油</string>
+    <string name="变速">变速</string>
+    <string name="马力">马力</string>
+    <string name="发动机">发动机</string>
+    <string name="驱动">驱动</string>
+    <string name="配置">配置</string>
+    <string name="外观">外观</string>
+    <string name="内饰">内饰</string>
+    <string name="你可能有兴趣">你可能有兴趣</string>
+    <string name="加入对比">加入对比</string>
+    <string name="立即下单">立即下单</string>
+    <string name="能源">能源</string>
+    <string name="力">力</string>
+    <!--car detail end-->
+
+    <string name="排序">排序</string>
+    <string name="车型对比">车型对比</string>
+    <string name="价格">价格</string>
+    <string name="品牌">品牌</string>
+    <string name="车型">车型</string>
+    <string name="车系">车系</string>
+    <string name="升序">升序</string>
+    <string name="降序">降序</string>
+    <string name="PK">PK</string>
+	<string name="推荐">推荐</string>
+    <string name="买车">买车</string>
+    <string name="请选择排序条件">请选择排序条件</string>
+    <string name="还没有结果">还没有结果</string>
+    <string name="外饰颜色">外饰颜色</string>
+    <string name="内饰颜色">内饰颜色</string>
+    <string name="再按一次退出程序">再按一次退出程序</string>
+    <string name="取消对比">取消对比</string>
+    <string name="已加入对比">已加入对比</string>
+    <string name="已取消对比">已取消对比</string>
+    <string name="万">万</string>
+    <string name="万起">万起</string>
+    <string name="微信支付结果">微信支付结果：%s</string>
+    <string name="提示">提示</string>
+    <string name="确定">确定</string>
+    <string name="请输入搜索内容">请输入搜索内容</string>
+    <string name="座">座</string>
+    <string name="搜索条件">搜索条件</string>
+    <string name="排序条件">排序条件</string>
+    <string name="名称">名称</string>
+    <string name="支付订单">支付订单</string>
+    <string name="确认支付">确认支付</string>
+    <string name="请至少选择一种支付方式">请至少选择一种支付方式</string>
+    <string name="首页">首页</string>
+    <string name="请至少选择两辆车进行对比">请至少选择两辆车进行对比</string>
+    <string name="保存">保存</string>
+    <string name="请输入正确的后台地址">请输入正确的后台地址</string>
+    <string name="请选择至少一个后端地址">请选择至少一个后端地址</string>
+    <string name="选择后台服务器">选择后台服务器</string>
+    <string name="已经保存到相册根目录">请凭次付款码到店提车,已经保存到相册根目录</string>
+    <string name="取消支付">取消支付。。</string>
+    <string name="支付错误">支付错误。。</string>
+    <string name="支付成功">支付成功。。</string>
+    <string name="用户名或者密码错误">用户名或者密码错误</string>
+    <string name="数据格式不一致">数据格式不一致</string>
+    <string name="取消">取消</string>
+    <string name="获取动态密码">获取动态密码</string>
+    <string name="加入会员">加入会员</string>
+    <string name="秒">秒</string>
+    <string name="关于">关于</string>
+    <string name="购物车">购物车</string>
+    <string name="退出登录">退出登录</string>
+    <string name="验证码错误">验证码错误</string>
+    <string name="请输入手机号码">请输入手机号码</string>
+    <string name="请输入验证码">请输入验证码</string>
+    <string name="请输入姓氏">请输入姓氏</string>
+    <string name="请输入名字">请输入名字</string>
+    <string name="注册">注册</string>
+    <string name="请输入所有必填项">请输入所有必填项</string>
+    <string name="请输入正确的手机号">请输入正确的手机号</string>
+    <string name="您好请先登录">您好，请先登录</string>
+    <string name="发现新版本">发现新版本</string>
+    <string name="立即更新">立即更新</string>
+    <string name="稍后更新">稍后更新</string>
+    <string name="开始下载新版本">开始下载新版本</string>
+    <string name="下载完成安装新版本">下载完成安装新版本</string>
+    <string name="暂无数据">暂无数据</string>
+    <string name="万元">万元</string>
+    <string name="登录超时请重新登录">登录超时，请重新登录</string>
+    <string name="您可以选择先去首页逛一逛">您可以选择先去首页逛一逛</string>
+    <string name="去首页">去首页</string>
+    <string name="姓氏">姓氏：</string>
+    <string name="名字">名字：</string>
+    <string name="退出登录提示">退出后您将不能下单，确定退出吗？</string>
+    <string name="个人资料">个人资料</string>
+    <string name="电子邮箱有误">电子邮箱有误</string>
+    <string name="上传头像">上传头像</string>
+    <string name="电子邮件">电子邮件</string>
+    <string name="性别">性别</string>
+    <string name="确认修改">确认修改</string>
+    <string name="我的订单">我的订单</string>
+    <string name="待确认">待确认</string>
+    <string name="待选店">待选店</string>
+    <string name="已选店">已选店</string>
+    <string name="保存到手机">保存到手机</string>
+    <string name="二维码描述">当您到达该汽车销售公司后，请让职员扫描上面的二维码，以进行购车程序。</string>
+    <string name="请耐心等待供应商确认">请耐心等待供应商确认</string>
+    <string name="订单二维码">订单二维码</string>
+    <string name="选择店面">选择店面</string>
+    <string name="保存成功">保存成功</string>
+    <string name="保存失败">保存失败，请稍后再试</string>
+    <string name="编辑个人资料">编辑个人资料</string>
+    <string name="申请使用摄像头权限被拒绝">申请使用摄像头权限被拒绝</string>
+    <string name="授权成功">授权成功</string>
+    <string name="是否在table上展示该车辆信息">是否在table上展示该车辆信息</string>
+    <string name="扫描结果">扫描结果</string>
+    <string name="工作台">工作台</string>
+    <string name="主页">主页</string>
+    <string name="我的">我的</string>
+    <string name="商品">商品</string>
+    <string name="热门品牌">热门品牌</string>
+    <string name="我的购物车">我的购物车</string>
+    <string name="我的对比">我的对比</string>
+    <string name="关于领骏达">关于领骏达</string>
+    <string name="登出">登出</string>
+    <string name="按车型">按车型</string>
+    <string name="按品牌">按品牌</string>
+    <string name="车系列表">车系列表</string>
+    <string name="车辆列表">车辆列表</string>
+    <string name="起">起</string>
+    <string name="刷选">刷选</string>
+    <string name="按座位数">按座位数</string>
+    <string name="选择品牌">选择品牌</string>
+    <string name="按价格">按价格</string>
+    <string name="排量">排量</string>
+    <string name="变速箱">变速箱</string>
+    <string name="媒体">媒体</string>
+    <string name="精确搜索">精确搜索</string>
+    <string name="编辑之选">编辑之选</string>
+    <string name="轿车">轿车</string>
+    <string name="供油方式">供油方式</string>
+    <string name="轮毂尺寸">轮毂尺寸</string>
+    <string name="油箱容积">油箱容积</string>
+    <string name="驱动方式">驱动方式</string>
+    <string name="最近照片">最近照片</string>
+    <string name="选择相册">选择相册</string>
+    <string name="未上传客户头像">未上传客户头像</string>
+    <string name="未获取读取手机存储权限">未获取读取手机存储权限</string>
+    <string name="商品列表">商品列表</string>
+    <string name="为您找到款型号">为您找到%款型号</string>
+    <string name="筛选">筛选</string>
+    <string name="车辆详情">车辆详情</string>
+    <string name="更多条件">更多条件</string>
+    <string name="其他配置">其他配置</string>
+    <string name="您可以选择先去主页逛一逛">您可以选择先去主页逛一逛</string>
+    <string name="去主页">去主页</string>
+    <string name="共有款商品">共有%款商品</string>
+    <string name="立即购买">立即购买</string>
+    <string name="库存件">库存%件</string>
+    <string name="加入购物车">加入购物车</string>
+    <string name="全选">全选</string>
+    <string name="元">元</string>
+    <string name="更多">更多</string>
+    <string name="选择支付方式">选择支付方式</string>
+    <string name="原价">原价</string>
+    <string name="诚意金">诚意金</string>
+    <string name="我同意领骏达服务协议">我同意《领骏达服务协议》</string>
+    <string name="提交订单">提交订单</string>
+    <string name="库存0件">库存(%)件</string>
+    <string name="热门车辆">热门车辆</string>
+    <string name="最近成交">最近成交</string>
+    <string name="商品支付成功提示">支付成功！请您凭商品订单二维码到店提货，谢谢！</string>
+    <string name="电话">电话</string>
+    <string name="请输入感兴趣的车型">请输入感兴趣的车型</string>
+    <string name="商品二维码描述">当您到达该汽车销售公司后，请让职员扫描上面的二维码，以进行提货程序。</string>
+    <string name="广东省深圳市南山区海天一路软件产业基地5C大堂">广东省深圳市南山区海天一路软件产业基地5C大堂</string>
+    <string name="深圳市领骏达旗舰店">深圳市领骏达旗舰店</string>
+    <string name="发布时间">发布时间:</string>
+    <string name="退出">退出</string>
+
+    <string name="tips_not_wifi">您当前正在使用移动网络，继续播放将消耗流量</string>
+    <string name="tips_not_wifi_confirm">继续播放</string>
+    <string name="tips_not_wifi_cancel">停止播放</string>
+    <string name="no_url">播放地址无效</string>
+    <string name="replay">重播</string>
+    <string name="click_to_restart">点击重试</string>
+    <string name="video_loading_faild">视频加载失败</string>
+    <string name="供应商编号">供应商编号:</string>
+    <string name="选择种类">选择种类</string>
+    <string name="数量">数量</string>
+</resources>

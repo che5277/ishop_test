@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+                android:id="@+id/rl_item_view"
+              android:layout_height="wrap_content"
+              >
+
+    <RelativeLayout
+        android:id="@+id/ll_left_layout"
+        android:layout_width="@dimen/jz_start_button_w_h_fullscreen"
+        android:layout_height="@dimen/order_item_width">
+
+        <TextView
+            android:id="@+id/tv_shop_number_icon"
+            android:background="@drawable/shop_number_bg"
+            android:layout_width="@dimen/drawer_item_height"
+            android:layout_height="@dimen/drawer_item_height"
+            android:text="1"
+            android:gravity="center"
+            android:textColor="@color/tab_text_nomal_color"
+            android:textSize="@dimen/text_size_18"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/ll_right_layout"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:minWidth="@dimen/shop_item_width"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="@dimen/order_item_width">
+
+        <TextView
+            android:id="@+id/tv_distanse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            />
+        <TextView
+            android:id="@+id/tv_selete_shop"
+            android:layout_marginTop="@dimen/padding_4"
+            android:layout_width="@dimen/jz_start_button_w_h_fullscreen"
+            android:textSize="@dimen/text_size_15"
+            android:background="@drawable/car_detail_tv_shape"
+            android:textColor="@color/backgroud_nomal"
+            android:gravity="center"
+            android:text="选择"
+            android:layout_height="@dimen/drawer_item_height"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/padding_10"
+        android:layout_marginRight="@dimen/padding_10"
+        android:layout_toLeftOf="@+id/ll_right_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/order_item_width"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@+id/ll_left_layout"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_shop_name"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/padding_10"
+            android:layout_height="wrap_content"
+            android:textColor="@color/car_detail_color"
+            android:textSize="@dimen/text_size_15"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_shop_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_13"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

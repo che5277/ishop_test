@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingRight="@dimen/jz_start_button_w_h_normal"
+        android:paddingLeft="@dimen/jz_start_button_w_h_normal"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:visibility="visible"
+            android:layout_marginTop="@dimen/padding_20"
+            android:scaleType="centerInside"
+            android:layout_width="@dimen/main_item_height"
+            android:layout_height="@dimen/main_item_height"
+            android:src="@drawable/user"
+            android:layout_centerHorizontal="true"
+            />
+        <LinearLayout
+            android:id="@+id/ll_input_layout"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_logo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:text="@string/上传头像"
+                android:layout_margin="@dimen/padding_10"
+                android:textSize="@dimen/text_action_title"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="@dimen/order_item_width">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/last_name_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:errorTextAppearance="@style/counterOverflow"
+                        android:gravity="center_vertical"
+                        >
+
+                        <!--EditText 设置左侧图片,系统建议drawableStart/drawableLeft一起用,API>17-->
+                        <AutoCompleteTextView
+                            android:id="@+id/auto_et_last_name"
+                            android:layout_width="match_parent"
+                            android:hint="@string/姓氏"
+                            android:textSize="@dimen/text_size_18"
+                            android:editable="true"
+                            android:textColor="@color/car_detail_color"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            />
+
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/first_name_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:errorTextAppearance="@style/counterOverflow"
+                        android:gravity="center_vertical"
+                        >
+
+                        <!--EditText 设置左侧图片,系统建议drawableStart/drawableLeft一起用,API>17-->
+                        <AutoCompleteTextView
+                            android:id="@+id/auto_et_first_name"
+                            android:layout_width="match_parent"
+                            android:textSize="18dp"
+                            android:hint="@string/名字"
+                            android:editable="true"
+                            android:textColor="@color/car_detail_color"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            />
+
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="@dimen/order_item_width">
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/sex_layout"
+                android:layout_width="0dp"
+                android:visibility="visible"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                app:errorTextAppearance="@style/counterOverflow"
+                android:gravity="center_vertical"
+                >
+
+                <!--EditText 设置左侧图片,系统建议drawableStart/drawableLeft一起用,API>17-->
+                <AutoCompleteTextView
+                    android:id="@+id/auto_et_sex"
+                    android:layout_width="match_parent"
+                    android:drawableRight="@drawable/dropdown"
+                    android:hint="@string/性别"
+                    android:textSize="@dimen/text_size_18"
+                    android:lines="1"
+                    android:editable="false"
+                    android:textColor="@color/car_detail_color"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/phone_layout"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                app:errorTextAppearance="@style/counterOverflow"
+                android:gravity="center_vertical"
+                >
+
+                <!--EditText 设置左侧图片,系统建议drawableStart/drawableLeft一起用,API>17-->
+                <AutoCompleteTextView
+                    android:id="@+id/auto_et_phone"
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/text_size_18"
+                    android:editable="true"
+                    android:hint="@string/电话"
+                    android:textColor="@color/car_detail_color"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="@dimen/order_item_width">
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/email_layout"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                app:errorTextAppearance="@style/counterOverflow"
+                android:gravity="center_vertical"
+                >
+
+                <!--EditText 设置左侧图片,系统建议drawableStart/drawableLeft一起用,API>17-->
+                <AutoCompleteTextView
+                    android:id="@+id/auto_et_email"
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/text_size_18"
+                    android:editable="true"
+                    android:hint="@string/电子邮件"
+                    android:textColor="@color/car_detail_color"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:background="@drawable/selector_submit_btn_bg"
+        android:layout_height="@dimen/search_item_height"
+        android:layout_marginBottom="@dimen/bottom_bar_margin"
+        android:text="@string/注册"
+        android:textStyle="bold"
+        android:textColor="@color/backgroud_nomal"
+        android:textSize="@dimen/text_action_title"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_agreen_layout"
+        android:layout_above="@id/btn_login"
+        android:layout_marginLeft="@dimen/padding_10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/car_element_height">
+
+        <tableshop.ilinkedtech.com.views.SwitchButton
+            android:id="@+id/sw_agree"
+            app:kswThumbColor="@color/selector_switch_thumb"
+            app:kswBackColor="@color/selector_switch_bg"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_agree_detail"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/text_size_13"
+            android:textColor="@color/tms_blue"
+            android:text="@string/我同意领骏达服务协议"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

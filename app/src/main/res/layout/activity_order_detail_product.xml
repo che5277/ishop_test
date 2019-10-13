@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/ll_order_item"
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/padding_4"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                    <TextView
+                        android:layout_margin="@dimen/padding_10"
+                        android:id="@+id/tv_totle_price"
+                        android:layout_width="match_parent"
+                        android:gravity="right"
+                        android:textColor="@color/colorPrimary"
+                        android:text="合计：0.0"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_shop_name"
+                    android:textSize="@dimen/text_size_18"
+                    android:text="大学展厅"
+                    android:layout_marginLeft="@dimen/padding_8"
+                    android:layout_marginRight="@dimen/padding_8"
+                    android:textColor="@color/black_effective"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tv_shop_address"
+                    android:layout_marginLeft="@dimen/padding_8"
+                    android:layout_marginRight="@dimen/padding_8"
+                    android:layout_marginBottom="@dimen/padding_20"
+                    android:layout_marginTop="@dimen/padding_8"
+                    android:textSize="@dimen/text_size_15"
+                    android:text="大学展厅"
+                    android:textColor="@color/tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:id="@+id/iv_qrcode"
+                    android:layout_marginTop="@dimen/padding_20"
+                    android:layout_marginBottom="@dimen/padding_20"
+                    android:layout_width="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="200dp"/>
+
+                <TextView
+                    android:id="@+id/tv_order_alert"
+                    android:layout_marginLeft="@dimen/padding_8"
+                    android:layout_marginRight="@dimen/padding_8"
+                    android:textSize="@dimen/text_size_15"
+                    android:layout_marginBottom="@dimen/padding_20"
+                    android:text="@string/二维码描述"
+                    android:textColor="@color/tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/保存到手机"
+                    android:textStyle="bold"
+                    android:textColor="@color/backgroud_nomal"
+                    android:textSize="22sp"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

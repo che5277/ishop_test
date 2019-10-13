@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="@color/item_seleted"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_selete_brand"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/drawer_item_height"
+            android:layout_margin="@dimen/padding_10"
+            android:background="@color/filter_tag_normal_bg"
+            android:text="@string/选择品牌"
+            android:textColor="@color/car_detail_item_text"
+            android:textSize="@dimen/text_size_18"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/drawer_item_height"
+            android:layout_marginLeft="@dimen/padding_10"
+            android:layout_marginRight="@dimen/padding_10"
+            android:background="@drawable/shape_my_item_bg"
+            android:gravity="center_vertical"
+            android:text="@string/按车型"
+            android:textColor="@color/black_effective"
+            android:textSize="@dimen/text_size_18"/>
+
+        <tableshop.ilinkedtech.com.views.flowlayout.TagFlowLayout
+            android:id="@+id/flowlayout_series_fileter"
+            app:max_select="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_10"
+            android:paddingLeft="@dimen/padding_10">
+        </tableshop.ilinkedtech.com.views.flowlayout.TagFlowLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/drawer_item_height"
+            android:layout_marginLeft="@dimen/padding_10"
+            android:layout_marginRight="@dimen/padding_10"
+            android:gravity="center_vertical"
+            android:background="@drawable/shape_my_item_bg"
+            android:text="@string/按价格"
+            android:textColor="@color/black_effective"
+            android:textSize="@dimen/text_size_15"/>
+
+        <tableshop.ilinkedtech.com.views.flowlayout.TagFlowLayout
+            android:id="@+id/flowlayout_price_fileter"
+            app:max_select="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_10"
+            android:paddingLeft="@dimen/padding_10">
+        </tableshop.ilinkedtech.com.views.flowlayout.TagFlowLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/drawer_item_height"
+            android:layout_marginLeft="@dimen/padding_10"
+            android:layout_marginRight="@dimen/padding_10"
+            android:background="@drawable/shape_my_item_bg"
+            android:gravity="center_vertical"
+            android:text="@string/按座位数"
+            android:textColor="@color/black_effective"
+            android:textSize="@dimen/text_size_15"/>
+
+        <tableshop.ilinkedtech.com.views.flowlayout.TagFlowLayout
+            android:id="@+id/flowlayout_seats_fileter"
+            app:max_select="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_10"
+            android:paddingLeft="@dimen/padding_10">
+        </tableshop.ilinkedtech.com.views.flowlayout.TagFlowLayout>
+
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/padding_20"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_item_height">
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/search_item_height"
+                android:layout_marginBottom="@dimen/padding_10"
+                android:layout_marginLeft="@dimen/drawer_item_height"
+                android:layout_marginRight="@dimen/drawer_item_height"
+                android:background="@drawable/login_button_bg"
+                android:text="@string/搜索"
+                android:textStyle="bold"
+                android:textColor="@color/backgroud_nomal"
+                android:textSize="@dimen/text_action_title"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

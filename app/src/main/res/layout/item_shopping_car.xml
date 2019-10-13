@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/shop_item_width"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ll_content_layout"
+        android:layout_marginRight="@dimen/padding_8"
+        android:background="@color/item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <CheckBox
+            android:id="@+id/cb_item"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/padding_8"
+            android:textColor="@color/text_color_shopping_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_toRightOf="@+id/cb_item"
+            android:layout_margin="@dimen/padding_8"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/shop_item_width"
+            android:layout_height="@dimen/shop_item_width"/>
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/padding_10"
+            android:layout_toLeftOf="@+id/iv_right"
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_icon"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/padding_4"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    tools:text="588"
+                    android:textSize="@dimen/text_size_15"/>
+                <TextView
+                    android:id="@+id/tv_product_name"
+                    android:paddingRight="@dimen/padding_4"
+                    android:layout_toLeftOf="@+id/tv_price"
+                    android:layout_width="match_parent"
+                    android:lines="2"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/轮毂尺寸"
+                    android:textColor="@color/car_detail_color"
+                    android:textSize="@dimen/text_size_13"/>
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/tv_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                tools:text="白色"
+                android:textSize="@dimen/text_size_10"/>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="@dimen/dp_180"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="@dimen/padding_8"
+            android:layout_height="wrap_content">
+            <tableshop.ilinkedtech.com.views.AmountView
+                android:id="@+id/amount_view"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_22"
+                app:btnTextSize="@dimen/text_size_13"
+                app:btnWidth="@dimen/car_item_color_iv_height"
+                app:tvWidth="@dimen/dp_25dp"/>
+            <TextView
+                android:paddingRight="@dimen/padding_4"
+                android:id="@+id/tv_storage"
+                android:layout_toLeftOf="@+id/amount_view"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/padding_4"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="@color/text_color"
+                android:text="@string/库存0件"
+                android:textSize="@dimen/text_size_10"/>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

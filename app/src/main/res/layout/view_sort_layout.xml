@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/sort_layout"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_gravity="bottom"
+            android:layout_width="wrap_content"
+            android:text="@string/排序"
+            android:layout_marginBottom="@dimen/padding_4"
+            android:textSize="@dimen/text_size_13"
+            android:layout_marginRight="@dimen/padding_8"
+            android:textColor="@color/car_detail_color"
+            android:layout_height="wrap_content"/>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="@dimen/height_150"
+            android:layout_height="wrap_content"
+            app:errorTextAppearance="@style/counterOverflow"
+            android:gravity="center_vertical"
+            >
+
+            <!--EditText 设置左侧图片,系统建议drawableStart/drawableLeft一起用,API>17-->
+            <AutoCompleteTextView
+                android:id="@+id/auto_sort"
+                android:layout_width="match_parent"
+                android:drawableRight="@drawable/dropdown"
+                android:textSize="@dimen/text_size_13"
+                android:lines="1"
+                android:editable="false"
+                android:textColor="@color/car_detail_color"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_list_title"
+        android:layout_toLeftOf="@+id/sort_layout"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/padding_8"
+        android:textColor="#4A90E2"
+        android:text="@string/为您找到款型号"
+        android:textSize="@dimen/text_size_13"
+        android:gravity="bottom"
+        android:layout_centerVertical="true"
+        android:layout_height="@dimen/drawer_item_height"/>
+</RelativeLayout>

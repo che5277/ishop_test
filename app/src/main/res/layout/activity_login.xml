@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg"
+    android:layout_height="match_parent"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingLeft="@dimen/search_item_height"
+            android:paddingRight="@dimen/search_item_height"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:visibility="visible"
+                android:layout_margin="@dimen/search_item_height"
+                android:layout_width="match_parent"
+                android:src="@drawable/logo"
+                android:layout_centerHorizontal="true"
+                android:layout_height="@dimen/height_80"/>
+
+            <LinearLayout
+                android:id="@+id/ll_input_layout"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/iv_logo"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:background="@drawable/et_bg"
+                    android:layout_marginBottom="@dimen/et_padding_left"
+                    android:paddingLeft="@dimen/et_padding_left"
+                    android:layout_width="match_parent"
+                    android:hint="@string/请输入手机号码"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/text_size_18"
+                    android:layout_height="@dimen/search_item_height"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/search_item_height">
+                    <EditText
+                        android:id="@+id/et_password"
+                        android:background="@drawable/et_bg"
+                        android:paddingLeft="@dimen/et_padding_left"
+                        android:layout_width="match_parent"
+                        android:hint="@string/请输入验证码"
+                        android:text=""
+                        android:textSize="@dimen/text_size_18"
+                        android:gravity="center_vertical"
+                        android:layout_height="@dimen/search_item_height"/>
+                    <TextView
+                        android:id="@+id/tv_get_mobile_msg"
+                        android:background="@drawable/selector_mobile_msm_bg"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/edit_text_bg"
+                        android:layout_width="@dimen/mobile_msm_width"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/获取动态密码"
+                        />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_item_height"
+            android:layout_marginBottom="@dimen/bottom_bar_margin"
+            android:background="@drawable/selector_login_btn_bg"
+            android:text="@string/加入会员"
+            android:textStyle="bold"
+            android:textColor="@color/backgroud_nomal"
+            android:textSize="@dimen/text_action_title"/>
+        <include android:layout_width="match_parent"
+                 android:layout_marginLeft="47dp"
+                 android:layout_height="@dimen/car_element_height"
+                 android:layout_above="@+id/btn_login"
+                 layout="@layout/view_agreement"/>
+    </RelativeLayout>
+
+
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</android.support.design.widget.CoordinatorLayout>

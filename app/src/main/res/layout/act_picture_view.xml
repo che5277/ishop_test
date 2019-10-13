@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+                android:background="@color/car_detail_color"
+              android:layout_height="match_parent">
+    <com.youth.banner.Banner
+        android:id="@+id/banner_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/padding_10"
+        android:text="1/2"
+        android:textColor="@color/edit_text_bg"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:padding="@dimen/padding_20"
+        android:src="@drawable/icon_back_hoz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

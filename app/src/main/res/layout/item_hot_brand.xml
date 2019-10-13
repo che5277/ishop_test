@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <ImageView
+        android:layout_marginTop="@dimen/padding_10"
+        android:id="@+id/iv_icon"
+        android:src="@drawable/user_profile"
+        android:layout_width="@dimen/jz_start_button_w_h_fullscreen"
+        android:layout_height="@dimen/drawer_item_height"/>
+    <TextView
+        android:id="@+id/tv_brand_name"
+        android:layout_marginBottom="@dimen/padding_10"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/主页"
+        android:textSize="@dimen/text_size_13"
+        android:gravity="center_horizontal"
+        android:textColor="@color/car_detail_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+</LinearLayout>

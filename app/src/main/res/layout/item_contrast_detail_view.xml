@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_my_item_layout"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_item_height">
+            <ImageView
+                android:id="@+id/iv_car1_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_alignParentBottom="true"
+                android:id="@+id/tv_series_name"
+                android:textSize="@dimen/text_size_13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_4"
+                android:text=""/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_model_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_4"
+            android:lines="1"
+            android:gravity="left|center_vertical"
+            android:text=""
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:background="@color/tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/compare_ll_bg_shape"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_4">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:layout_marginTop="@dimen/padding_4"
+                    android:textSize="@dimen/text_size_10"
+                    android:text="@string/排量"/>
+
+                <TextView
+                    android:id="@+id/tv_motor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_13"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:layout_marginTop="@dimen/padding_4"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/compare_ll_bg_shape"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_4">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:layout_marginTop="@dimen/padding_4"
+                    android:textSize="@dimen/text_size_10"
+                    android:text="@string/能源"/>
+
+                <TextView
+                    android:id="@+id/tv_fuel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_13"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:layout_marginTop="@dimen/padding_4"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/compare_ll_bg_shape"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_4">
+
+                <TextView
+                    android:textSize="@dimen/text_size_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:text="@string/长宽高"/>
+
+                <TextView
+                    android:id="@+id/tv_size"
+                    android:lines="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_13"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:layout_marginTop="@dimen/padding_4"
+                    android:text=""/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/compare_ll_bg_shape"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_4">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/text_size_10"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:layout_marginTop="@dimen/padding_4"
+                    android:text="@string/发动机"/>
+
+                <TextView
+                    android:id="@+id/tv_engine"
+                    android:textSize="@dimen/text_size_13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:layout_marginTop="@dimen/padding_4"
+                    android:text=""/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/compare_ll_bg_shape"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_4">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:layout_marginTop="@dimen/padding_4"
+                    android:textSize="@dimen/text_size_10"
+                    android:text="@string/变速箱"/>
+
+                <TextView
+                    android:id="@+id/tv_tanmittion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_13"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:layout_marginTop="@dimen/padding_4"
+                    android:text=""/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/compare_ll_bg_shape"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_4">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:textSize="@dimen/text_size_10"
+                    android:layout_marginTop="@dimen/padding_4"
+                    android:text="@string/车门"/>
+
+                <TextView
+                    android:id="@+id/tv_door"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_13"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:layout_marginTop="@dimen/padding_4"
+                    android:text=""/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/compare_ll_bg_shape"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_4">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_10"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:layout_marginTop="@dimen/padding_4"
+                    android:text="@string/座位"/>
+
+                <TextView
+                    android:id="@+id/tv_seat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_13"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:text=""/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/compare_ll_bg_shape"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_4">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_10"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:layout_marginTop="@dimen/padding_4"
+                    android:text="@string/车型"/>
+
+                <TextView
+                    android:id="@+id/tv_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_13"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:layout_marginTop="@dimen/padding_4"
+                    />
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/compare_ll_bg_shape"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_4">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_10"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:layout_marginTop="@dimen/padding_4"
+                    android:text="@string/油箱容积"/>
+
+                <TextView
+                    android:id="@+id/tv_tank_capacity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_13"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:layout_marginTop="@dimen/padding_4"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/compare_ll_bg_shape"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_4">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:layout_marginTop="@dimen/padding_4"
+                    android:textSize="@dimen/text_size_10"
+                    android:text="@string/驱动方式"/>
+
+                <TextView
+                    android:id="@+id/tv_drive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_13"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:layout_marginTop="@dimen/padding_4"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/compare_ll_bg_shape"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_4">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_10"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:layout_marginTop="@dimen/padding_4"
+                    android:text="@string/轮毂尺寸"/>
+
+                <TextView
+                    android:id="@+id/tv_hub_size"
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/text_size_13"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:layout_marginTop="@dimen/padding_4"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/compare_ll_bg_shape"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_4">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_10"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:layout_marginTop="@dimen/padding_4"
+                    android:text="@string/供油方式"/>
+
+                <TextView
+                    android:id="@+id/tv_oil_supply"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_4"
+                    android:layout_marginTop="@dimen/padding_4"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="300dp"
+            android:background="@drawable/compare_ll_bg_shape"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_4">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_8"
+                android:textSize="@dimen/text_size_13"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/其他配置"/>
+
+            <tableshop.ilinkedtech.com.views.flowlayout.TagFlowLayout
+                android:id="@+id/id_flow_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_10"
+                app:max_select="-1"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

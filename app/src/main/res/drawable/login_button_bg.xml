@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--gradient(-180deg, #EE2326 0%, #DB091A 100%);border-radius: 2px;-->
+    <gradient
+    android:startColor="@color/bg_login_nomal"
+    android:endColor="@color/bg_login_nomal"
+    android:angle="-180" />
+    <!--<corners android:radius="@dimen/et_bg_radius"/>-->
+    <corners android:radius="@dimen/padding_10"/>
+</shape>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    android:background="@color/item_bg"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:padding="@dimen/padding_10"
+            android:text="@string/热门品牌"
+            android:layout_width="match_parent"
+            android:textSize="@dimen/text_size_15"
+            android:textColor="@color/car_detail_color"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_marginLeft="@dimen/padding_10"
+            android:layout_marginRight="@dimen/padding_10"
+            android:layout_width="match_parent"
+            android:background="@color/divider_color"
+            android:layout_height="1dp"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginRight="@dimen/padding_20"
+            android:id="@+id/hot_brand_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <tableshop.ilinkedtech.com.views.sidebar.WaveSideBarView
+        android:id="@+id/side_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</RelativeLayout>
+

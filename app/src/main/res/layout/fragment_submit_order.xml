@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="@color/bg_focus">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/padding_4"
+        android:layout_marginRight="@dimen/padding_4"
+        android:layout_marginBottom="@dimen/padding_4"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/padding_4"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="false"
+        android:layout_centerHorizontal="true"
+        app:cardElevation="3dp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:background="@color/item_bg"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_car_name"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/car_detail_color"
+                    android:textSize="@dimen/text_size_18"
+                    android:layout_marginTop="@dimen/padding_20"
+                    android:layout_marginBottom="@dimen/padding_20"
+                    android:text="@string/选择支付方式"
+                    android:layout_marginLeft="@dimen/padding_10"
+                    android:layout_height="wrap_content"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/car_element_height"
+                    android:layout_marginLeft="@dimen/padding_10"
+                    android:layout_marginRight="@dimen/padding_10"
+                    android:background="@drawable/shape_my_item_bg">
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/shape_my_item_bg"
+                        android:gravity="center_vertical"
+                        android:text="149.8万"
+                        android:textColor="@color/car_detail_color"
+                        android:textSize="@dimen/text_size_15"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/tv_price"
+                        android:background="@drawable/shape_my_item_bg"
+                        android:gravity="center_vertical"
+                        android:text="@string/原价"
+                        android:textColor="@color/tip"
+                        android:textSize="@dimen/text_size_15"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/car_element_height"
+                    android:layout_marginLeft="@dimen/padding_10"
+                    android:layout_marginRight="@dimen/padding_10"
+                    android:background="@drawable/shape_my_item_bg">
+                    <TextView
+                        android:id="@+id/tv_brand_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/shape_my_item_bg"
+                        android:gravity="center_vertical"
+                        android:text="奔驰"
+                        android:textColor="@color/car_detail_color"
+                        android:textSize="@dimen/text_size_15"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/tv_brand_name"
+                        android:background="@drawable/shape_my_item_bg"
+                        android:gravity="center_vertical"
+                        android:text="@string/品牌"
+                        android:textColor="@color/tip"
+                        android:textSize="@dimen/text_size_15"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/car_element_height"
+                    android:layout_marginLeft="@dimen/padding_10"
+                    android:layout_marginRight="@dimen/padding_10"
+                    android:background="@drawable/shape_my_item_bg">
+                    <TextView
+                        android:id="@+id/tv_series_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/shape_my_item_bg"
+                        android:gravity="center_vertical"
+                        android:text="迈巴赫"
+                        android:textColor="@color/car_detail_color"
+                        android:textSize="@dimen/text_size_15"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/tv_series_name"
+                        android:background="@drawable/shape_my_item_bg"
+                        android:gravity="center_vertical"
+                        android:text="@string/车系"
+                        android:textColor="@color/tip"
+                        android:textSize="@dimen/text_size_15"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/car_element_height"
+                    android:layout_marginLeft="@dimen/padding_10"
+                    android:layout_marginRight="@dimen/padding_10"
+                    android:background="@drawable/shape_my_item_bg">
+                    <TextView
+                        android:id="@+id/tv_model_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/shape_my_item_bg"
+                        android:gravity="center_vertical"
+                        android:text="450 4MATC"
+                        android:textColor="@color/car_detail_color"
+                        android:textSize="@dimen/text_size_15"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/tv_model_name"
+                        android:background="@drawable/shape_my_item_bg"
+                        android:gravity="center_vertical"
+                        android:text="@string/车型"
+                        android:textColor="@color/tip"
+                        android:textSize="@dimen/text_size_15"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/car_element_height"
+                    android:layout_margin="@dimen/padding_10"
+                    >
+                    <TextView
+                        android:id="@+id/tv_earnest_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:text="99.00"
+                        android:textStyle="bold"
+                        android:textColor="@color/triangle"
+                        android:textSize="@dimen/text_size_18"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/tv_earnest_money"
+                        android:gravity="center_vertical"
+                        android:text="@string/诚意金"
+                        android:textColor="@color/tip"
+                        android:textSize="@dimen/text_size_15"/>
+
+                </RelativeLayout>
+
+
+                <include layout="@layout/view_agreement"></include>
+
+                <Button
+                    android:id="@+id/btn_submit_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_8"
+                    android:background="@drawable/selector_submit_btn_bg"
+                    android:text="@string/提交订单"
+                    android:textColor="@color/item_seleted"
+                    android:textSize="22sp"
+                    />
+
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>
+

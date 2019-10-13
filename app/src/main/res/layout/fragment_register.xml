@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg"
+    android:layout_height="match_parent"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingRight="47dp"
+        android:paddingLeft="47dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:visibility="visible"
+            android:layout_margin="50dp"
+            android:scaleType="centerInside"
+            android:layout_width="wrap_content"
+            android:src="@drawable/user"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_below="@+id/iv_logo"
+            android:id="@+id/ll_input_layout"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/et_padding_left"
+                android:paddingLeft="@dimen/et_padding_left"
+                android:background="@drawable/et_bg"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/car_detail_color"
+                    android:text="@string/姓氏"
+                    android:textSize="@dimen/text_size_18"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:id="@+id/et_last_name"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/car_detail_color"
+                    android:text="11"
+                    android:textSize="@dimen/text_size_18"
+                    android:gravity="center_vertical"
+                    android:layout_height="50dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/et_padding_left"
+                android:background="@drawable/et_bg"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/car_detail_color"
+                    android:text="@string/名字"
+                    android:textSize="@dimen/text_size_18"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:id="@+id/et_first_name"
+                    android:background="@drawable/et_bg"
+                    android:textColor="@color/car_detail_color"
+                    android:layout_width="match_parent"
+                    android:text=""
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/text_size_18"
+                    android:layout_height="50dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="@dimen/bottom_bar_margin"
+        android:background="@color/bg_login_nomal"
+        android:text="@string/注册"
+        android:textStyle="bold"
+        android:textColor="@color/backgroud_nomal"
+        android:textSize="22sp"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

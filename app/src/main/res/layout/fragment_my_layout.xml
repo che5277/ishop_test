@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_customer_info_layout"
+            android:layout_width="match_parent"
+            android:padding="@dimen/activity_vertical_margin"
+            android:orientation="horizontal"
+            android:background="@drawable/profile_bg"
+            android:layout_height="@dimen/order_item_width">
+            <ImageView
+                android:padding="@dimen/padding_8"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/iv_icon"
+                android:src="@drawable/user"
+                android:scaleType="fitCenter"
+                android:layout_width="@dimen/jz_start_button_w_h_fullscreen"
+                android:layout_height="@dimen/jz_start_button_w_h_fullscreen"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_marginLeft="@dimen/padding_10"
+                    android:layout_width="wrap_content"
+                    android:text="@string/您好请先登录"
+                    android:textColor="@color/backgroud_nomal"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/text_size_18"
+                    android:layout_height="match_parent"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_user_detail"
+                        android:layout_marginLeft="@dimen/padding_10"
+                        android:layout_width="wrap_content"
+                        android:text="@string/编辑个人资料"
+                        android:textColor="@color/backgroud_nomal"
+                        android:drawablePadding="@dimen/padding_10"
+                        android:drawableRight="@drawable/right"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/text_size_13"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:id="@+id/tv_user_logout"
+                        android:layout_width="wrap_content"
+                        android:text="@string/退出"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/backgroud_nomal"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/text_size_13"
+                        android:layout_height="match_parent"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/shape_my_item_bg"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_order_list"
+                        android:padding="@dimen/padding_10"
+                        android:textSize="@dimen/text_size_15"
+                        android:drawableLeft="@drawable/menu_icon_orders"
+                        android:drawablePadding="@dimen/padding_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/drawer_item_height"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/my_item_color"
+                        android:text="@string/我的订单"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/arrow"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/shape_my_item_bg"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:visibility="visible"
+                        android:padding="@dimen/padding_10"
+                        android:id="@+id/tv_shopping_car"
+                        android:textSize="@dimen/text_size_15"
+                        android:drawableLeft="@drawable/menu_icon_cart"
+                        android:drawablePadding="@dimen/padding_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/drawer_item_height"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/my_item_color"
+                        android:text="@string/我的购物车"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/arrow"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/shape_my_item_bg"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_my_favorite"
+                        android:padding="@dimen/padding_10"
+                        android:textSize="@dimen/text_size_15"
+                        android:drawableLeft="@drawable/menu_icon_collection"
+                        android:drawablePadding="@dimen/padding_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/drawer_item_height"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/my_item_color"
+                        android:text="@string/我的收藏"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/arrow"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/shape_my_item_bg"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_contrast"
+                        android:padding="@dimen/padding_10"
+                        android:textSize="@dimen/text_size_15"
+                        android:drawableLeft="@drawable/menu_icon_compare"
+                        android:drawablePadding="@dimen/padding_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/drawer_item_height"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/my_item_color"
+                        android:text="@string/我的对比"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/arrow"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/shape_my_item_bg"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_about"
+                        android:padding="@dimen/padding_10"
+                        android:textSize="@dimen/text_size_15"
+                        android:drawableLeft="@drawable/menu_icon_about"
+                        android:layout_marginBottom="@dimen/padding_8"
+                        android:drawablePadding="@dimen/padding_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/drawer_item_height"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/my_item_color"
+                        android:text="手机投屏"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/arrow"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/shape_my_item_bg"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_setting"
+                        android:padding="@dimen/padding_10"
+                        android:textSize="@dimen/text_size_15"
+                        android:drawableLeft="@drawable/menu_icon_setting"
+                        android:drawablePadding="@dimen/padding_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/drawer_item_height"
+                        android:textColor="@color/my_item_color"
+                        android:gravity="center_vertical"
+                        android:text="@string/设置"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/arrow"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

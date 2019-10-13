@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+
+
+    <tableshop.ilinkedtech.com.views.keyboard.EditView
+        android:id="@+id/edit_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:textColor="@android:color/black"
+        android:textColorHint="#BABABA"/>
+
+    <LinearLayout
+        android:id="@+id/ll_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible">
+
+        <include layout="@layout/content_keyboard"></include>
+
+    </LinearLayout>
+</RelativeLayout>

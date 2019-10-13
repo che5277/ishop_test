@@ -1,0 +1,186 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+//Bugtags
+//apply plugin: 'com.bugtags.library.plugin'
+
+//bugtags {
+//    //自动上传符号表功能配置，如果需要根据 build varint 配置，请参考插件详细使用说明
+//    appKey "16343e4b16d02269dfa0d5a9e5b7563e"  //这里是你的 appKey
+//    appSecret "APP_SECRET"    //这里是你的 appSecret，管理员在设置页可以查看
+//    mappingUploadEnabled true
+//
+//    //网络跟踪功能配置(企业版)
+//       trackingNetworkEnabled true
+//}
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "table.shop.ilinkedtech.com"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 204
+        versionName "2.0.4"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true    //加上这行即可
+            }
+        }
+    }
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            //多渠道打包配置
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 输出apk名称为iShop_v1.0_2016-08-15_wandoujia.apk
+                        def fileName = "tableShop_v${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles 'proguard-rules.pro'
+        }
+    }
+
+    // 渠道配置
+    productFlavors {
+        pgyer {}
+        xiaomi {}
+    }
+
+    productFlavors.all { flavor ->
+        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name] //动态地修改AndroidManifest中的渠道名
+    }
+//    android.applicationVariants.all { variant ->
+//        variant.outputs.each { output ->
+//            def outputFile = output.outputFile
+//            if (outputFile != null && outputFile.name.endsWith('debug.apk')) {
+//                //apk name
+//                def fileName = "iTableShop-${defaultConfig.versionName}.apk"
+//                output.outputFile = new File(outputFile.parent, fileName)
+//            }
+//            if (outputFile != null && outputFile.name.endsWith('release.apk')) {
+//                //apk name
+//                def fileName = "iTableShop-${defaultConfig.versionName}-release.apk"
+//                output.outputFile = new File(outputFile.parent, fileName)
+//            }
+//        }
+//    }
+//    android.applicationVariants.all { variant ->
+//        variant.outputs.all {
+//            outputFileName = "${variant.name}-${variant.versionName}.apk"
+//        }
+//    }
+
+    Properties propertiesForFile = new Properties()
+    InputStream inputStream = project.rootProject.file('local.properties').newDataInputStream();
+    propertiesForFile.load(inputStream)
+    signingConfigs {
+        debug {
+//            storeFile file(rootProject.ext.STOREFILE)
+//            storePassword rootProject.ext.KEYPSW
+//            keyAlias rootProject.ext.KEYALIAS
+//            keyPassword rootProject.ext.KEYPSW
+            storeFile rootProject.file(propertiesForFile.get('configure_file_release'))
+            storePassword propertiesForFile.get('storePassword')
+            keyAlias propertiesForFile.get('keyAlias')
+            keyPassword propertiesForFile.get('keyPassword')
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+//            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
+        }
+    }
+    greendao {
+        schemaVersion 1
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+//    compile 'com.android.support:appcompat-v7:26.+'
+    compile "com.android.support:design:$rootProject.ext.supportLibraryVersion"
+    compile "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion"
+    compile "com.android.support:cardview-v7:$rootProject.ext.supportLibraryVersion"
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha4'
+    compile "com.zhy:okhttputils:$rootProject.ext.okhttpUtilsVersion"
+    compile "com.google.code.gson:gson:$rootProject.gsonVersion"
+    compile "com.jakewharton:butterknife:$rootProject.butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterKnifeVersion"
+    compile "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+
+    compile 'org.greenrobot:eventbus:3.1.1'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile "io.reactivex.rxjava2:rxjava:2.0.8"
+
+    compile("com.github.hotchemi:permissionsdispatcher:3.1.0") {
+        // if you don't use android.app.Fragment you can exclude support for them
+        exclude module: "support-v13"
+    }
+    annotationProcessor "com.github.hotchemi:permissionsdispatcher-processor:3.1.0"
+
+    //Bugtags
+//    compile 'com.bugtags.library:bugtags-lib:latest.integration'
+    // database
+    compile "org.greenrobot:greendao:$rootProject.greenDaoVersion"
+    testCompile 'junit:junit:4.12'
+    compile files('libs/umeng_social_api.jar')
+    compile files('libs/umeng_social_net.jar')
+    compile files('libs/umeng_social_shareboard.jar')
+    compile files('libs/umeng_social_tool.jar')
+    compile files('libs/SocialSDK_email.jar')
+    compile files('libs/SocialSDK_sms.jar')
+    compile files('libs/SocialSDK_WeChat_Simplify.jar')
+    compile files('libs/umeng_shareboard_widget.jar')
+    compile files('libs/BaiduLBS_Android.jar')
+
+    //视频播放
+//    compile 'fm.jiecao:jiecaovideoplayer:5.7'
+    //轮播器
+    compile 'com.youth.banner:banner:1.4.9'
+
+    //微信
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    //二维码生成扫描
+    compile 'com.google.zxing:core:3.3.0'
+
+    //pager indicator
+    compile 'com.yinglan.alphatabs:library:1.0.8'
+    compile 'cc.solart:turbo-recyclerview-helper:1.0.3-beta'
+
+    compile 'com.amap.api:map2d:latest.integration'
+    compile 'com.amap.api:location:latest.integration'
+
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5-alpha-3'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5-alpha-3'//没有使用特殊Header，可以不加这行
+    //极光推送
+//    compile 'cn.jiguang.sdk:jpush:3.0.9'  // 此处以JPush 3.0.9 版本为例。
+//    compile 'cn.jiguang.sdk:jcore:1.1.7'  // 此处以JCore 1.1.7 版本为例。
+}

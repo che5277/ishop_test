@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+
+    <LinearLayout
+        android:id="@+id/ll_order_item"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/padding_4"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/divider_view"
+        android:layout_below="@+id/ll_order_item"
+        android:layout_margin="@dimen/padding_4"
+        android:layout_width="match_parent"
+        android:background="@color/layout_bg"
+        android:layout_height="2dp"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/divider_view"
+        android:layout_margin="@dimen/padding_8"
+        android:layout_above="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_shop_name"
+            android:textSize="@dimen/text_size_18"
+            android:text="大学展厅"
+            android:textColor="@color/black_effective"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_shop_address"
+            android:layout_marginTop="@dimen/padding_8"
+            android:layout_below="@+id/tv_shop_name"
+            android:textSize="@dimen/text_size_15"
+            android:text="大学展厅"
+            android:textColor="@color/tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/iv_qrcode"
+            android:layout_width="200dp"
+            android:layout_centerInParent="true"
+            android:layout_height="200dp"/>
+
+        <TextView
+            android:id="@+id/tv_order_alert"
+            android:layout_marginTop="@dimen/padding_8"
+            android:layout_below="@+id/iv_qrcode"
+            android:textSize="@dimen/text_size_15"
+            android:text="@string/二维码描述"
+            android:textColor="@color/tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="@dimen/bottom_bar_margin"
+        android:background="@color/colorPrimary"
+        android:text="@string/保存到手机"
+        android:textStyle="bold"
+        android:textColor="@color/backgroud_nomal"
+        android:textSize="22sp"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
